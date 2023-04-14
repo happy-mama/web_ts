@@ -8,5 +8,6 @@ import CNavbar from "./components/CNavbar.vue";
 </template>
 
 <style>
-@import '@/assets/main.css';
+@import "@/assets/main.css";
+@import "@/assets/embed.css";
 </style>

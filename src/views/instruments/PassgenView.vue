@@ -86,37 +86,61 @@ export default defineComponent({
 </script>
 
 <template>
-		<div class="embed">
-			<div class="header">options</div>
-			<div class="level">
-				<p class="special">length:</p>
-				<select v-model="genOptions.length" name="value">
-					<option value="8">8</option>
-					<option value="12">12</option>
-					<option value="16">16</option>
-					<option value="20">20</option>
-					<option value="24">24</option>
-					<option value="28">28</option>
-					<option value="32">32</option>
-				</select><br>
-				<label><input v-model="genOptions.numbers" type="checkbox">
-					<p class="special">numbers ( 0 - 9 )</p><br>
-				</label>
-				<label><input v-model="genOptions.uppercase" type="checkbox">
-					<p class="special">uppercase letters ( A - Z )</p><br>
-				</label>
-				<label><input v-model="genOptions.lowercase" type="checkbox">
-					<p class="special">lowercase letters ( a - z )</p><br>
-				</label>
-				<label><input v-model="genOptions.specialSymbols" type="checkbox">
-					<p class="special">special symbols ( !, %, *, ^, (, ), ?, @, #, $ )</p>
-				</label>
+	<div class="midle">
+		<div class="e">
+			<div class="msg">
+				<div class="title">Options</div>
+				<div class="description">
+					<ul class="list">
+						<li>
+							Length:
+							<select v-model="genOptions.length" name="value">
+								<option value="8">8</option>
+								<option value="12">12</option>
+								<option value="16">16</option>
+								<option value="20">20</option>
+								<option value="24">24</option>
+								<option value="28">28</option>
+								<option value="32">32</option>
+							</select>
+						</li>
+						<li>
+							<label><input v-model="genOptions.numbers" type="checkbox">
+								numbers ( 0 - 9 )
+							</label>
+						</li>
+						<li>
+							<label><input v-model="genOptions.uppercase" type="checkbox">
+								uppercase letters ( A - Z )
+							</label>
+						</li>
+						<li>
+							<label><input v-model="genOptions.lowercase" type="checkbox">
+								lowercase letters ( a - z )
+							</label>
+						</li>
+						<li>
+							<label><input v-model="genOptions.specialSymbols" type="checkbox">
+								special symbols ( !, %, *, ^, (, ), ?, @, #, $ )
+							</label>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="header">Password</div>
-			<div class="level">
-				<p class="special">{{ password }}</p><br>
-				<button :disabled="execBtnDisable" @click="execute()">GENERATE</button>
-				<button @click="copy()">COPY</button>
+			<div class="msg">
+				<div class="title">Password</div>
+				<div class="description">
+					<div class="midle">
+						<p class="special">{{ password }}</p><br>
+					</div>
+					<div class="space"></div>
+					<div style="display: flex">
+						<button class="gen" :disabled="execBtnDisable" @click="execute()">GENERATE</button>
+						<div style="display: block; margin-right: auto;"></div>
+						<button class="gen" @click="copy()">COPY</button>
+					</div>
+				</div>
 			</div>
 		</div>
+	</div>
 </template>

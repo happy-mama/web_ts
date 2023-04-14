@@ -16,10 +16,10 @@ app.use(VueCookies);
 app.use(router);
 app.use(VueAxios, axios);
 
-// const siteLink = "https://happy.tatar"
-const siteLink = "http://localhost:3000"
-// const apiLink = "https://api.happy.tatar"
-const apiLink = "http://localhost:3010"
+const siteLink = "https://happy.tatar"
+// const siteLink = "http://localhost:3000"
+const apiLink = "https://api.happy.tatar"
+// const apiLink = "http://localhost:3010"
 
 declare module "@vue/runtime-core" {
     interface ComponentCustomProperties {
