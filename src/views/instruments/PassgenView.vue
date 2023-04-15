@@ -134,9 +134,8 @@ export default defineComponent({
 						<p class="special">{{ password }}</p><br>
 					</div>
 					<div class="space"></div>
-					<div style="display: flex">
+					<div style="display: flex; justify-content: space-between;">
 						<button class="gen" :disabled="execBtnDisable" @click="execute()">GENERATE</button>
-						<div style="display: block; margin-right: auto;"></div>
 						<button class="gen" @click="copy()">COPY</button>
 					</div>
 				</div>

@@ -52,8 +52,8 @@ div.e div.msg div.title {
     font-size: 20px;
     background-color: #202225;
 
-    padding: 3px;
-    padding-left: 10px;
+    padding: 6px;
+    /* padding-left: 10px; */
 
     border: 2px;
     border-radius: 4px 4px 0px 0px;
@@ -66,7 +66,7 @@ div.e div.msg div.description {
     border-radius: 0px 0px 4px 4px;
 }
 
-div.e a {
+div.e a.link {
     color: #1da8ff;
 	text-decoration: none;
 
@@ -76,13 +76,18 @@ div.e a {
 }
 div.e a.bar {
     display: block;
+
+	text-decoration: none;
     color: #ededed;
     background-color: unset;
+
     padding: 0px;
     border-radius: 0px;
 }
 
 div.e a.embed {
+	border-radius: 4px;
+
     margin: 5px;
     padding: 5px;
     display: inline-block;
@@ -123,4 +128,25 @@ div.e button.gen {
 
     border: 2px solid #13351e;
     border-radius: 4px;
+}
+
+a.FSFL {
+    color: #1da8ff;
+    text-decoration: none;
+    background-color: #003759;
+    border-radius: 4px;
+
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+a.FSFL div {
+    margin-left: 4px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50%;
+}
+a.FSFL img {
+    background-color: inherit;
+    float: left;
 }

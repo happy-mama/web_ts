@@ -37,14 +37,43 @@ export default defineComponent({
 
 </script>
 
+<style>
+@import "@/assets/posts.css";
+</style>
+
 <template>
-    <div class="embed">
-        <div>
-            <div class="special" v-if="isLoading">Loading posts...</div>
-            <div class="level" v-for="(item) in posts" :key="item">
-                <OnePost :post="item"/>
+
+    <div class="posts">
+        <div class="header">
+            HEADER
+        </div>
+        <div class="body" v-if="!isLoading">
+            <div class="post" v-for="item in posts" :key="item">
+                <OnePost :post="item" />
             </div>
         </div>
+        <div class="special" v-if="isLoading">Loading posts...</div>
+    </div>
+
+    <div class="e" style="max-width: 80vw;">
+
+        <!-- <div class="msg">
+            <div class="title">options</div>
+            <div class="description">
+                <RouterLink class="embed" style="background-color: #ededed; color: black" to="/instruments/poster">
+                    <div class="text">
+                        Create post
+                    </div>
+                </RouterLink>
+            </div>
+        </div> -->
+
+        <!-- <div>
+            <div class="special" v-if="isLoading">Loading posts...</div>
+            <div class="level" v-for="item in posts" :key="item">
+                <OnePost :post="item" />
+            </div>
+        </div> -->
         <button>load posts</button>
     </div>
 </template>

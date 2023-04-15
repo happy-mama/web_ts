@@ -5,14 +5,14 @@
 				<div class="title">Welcome to my website</div>
 				<div class="description">
 					I'am a full-stack dev from Russia<br>
-					See <router-link to="/instruments">Instruments</router-link> page for my interesting tools
+					See <router-link class="link" to="/instruments">Instruments</router-link> page for my interesting tools
 				</div>
 			</div>
 			<div class="space"></div>
 			<div class="msg">
 				<div class="title">My skills</div>
 				<div class="description">
-					My projects on <a href="https://github.com/happy-mama" target="_blank">Github</a><br>
+					My projects on <a class="link" href="https://github.com/happy-mama" target="_blank">Github</a><br>
 					My main languages is <p class="special">JS/TS</p> (Junior)<br>
 					This site is writen using <p class="special">Vue 3</p> framework with Api on <p class="special">Express
 					</p><br>
@@ -26,7 +26,7 @@
 							Writed my own Proxy
 						</li>
 						<li>
-							Have some experience with <p class="special">WebSocket</p>
+							A litle know <p class="special">WebSocket</p>
 						</li>
 						<li>
 							Have some experience in <p class="special">Linux Ubuntu</p>
@@ -56,12 +56,12 @@
 				<div class="description">
 
 					<a class="embed" style="background-color: white; color: black;" href="https://github.com/happy-mama" target="_blank">
-						<img class="img" src="@/assets/github.svg">
+						<img class="img" src="@/assets/svg/github.svg">
 						<div class="text">Github</div>
 					</a>
 
 					<a class="embed" style="background-color: white; color: black;" href="https://steamcommunity.com/id/_KONTENT/" target="_blank">
-						<img class="img" src="@/assets/steam.svg">
+						<img class="img" src="@/assets/svg/steam.svg">
 						<div class="text">Steam</div>
 					</a>
 

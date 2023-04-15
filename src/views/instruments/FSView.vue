@@ -43,7 +43,6 @@ export default defineComponent({
 				this.path = ""
 			}
 			this.request().then(() => {
-				// this.loading = false
 				if (to.query.dir.includes("/")) { this.useBack = true } else { this.useBack = false }
 				if (to.query.dir.split("/").length > 2) { this.useRoot = true } else { this.useRoot = false }
 			})
@@ -54,15 +53,32 @@ export default defineComponent({
 </script>
 
 <template>
-	<div class="embed">
-		<div class="header">FS</div>
-		<div class="text">
-			<ul>
-				<p class="special" v-if="loading">LOADING API DATA...</p>
-				<FSFile v-if="apiData && !loading" :data="apiData" /><br>
-				<RouterLink v-if="useBack && !loading" :to="oldPath">back</RouterLink><br>
-				<RouterLink v-if="useRoot && !loading" to="/instruments/FS?dir=">root</RouterLink>
-			</ul>
+	<div class="midle">
+		<div class="e" style="min-width: 80vw;">
+			<div class="msg">
+				<div class="title">FS</div>
+				<div class="description">
+					<p class="special" v-if="loading">Loading api data...</p>
+					<div v-if="!loading">
+						Path: <p class="special">public{{ path }}/</p>
+						<ul class="list">
+							<FSFile v-if="apiData" :data="apiData" />
+						</ul>
+						<RouterLink class="FSFL" v-if="useBack" :to="oldPath">
+							<img src="@/assets/svg/back.svg">
+							<div>
+								back
+							</div>
+						</RouterLink>
+						<RouterLink class="FSFL" v-if="useRoot" to="/instruments/FS?dir=">
+							<img src="@/assets/svg/root.svg">
+							<div>
+								root
+							</div>
+						</RouterLink>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>

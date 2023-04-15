@@ -20,7 +20,14 @@ export default {
 </script>
 
 <template>
-	<div class="header">{{ post.header }}</div>
-	<div>{{ post.text }}</div><br>
-	<p class="special">{{ post.author.login }}</p>
+	<div class="title">{{ post.header }}</div>
+	<div class="text">{{ post.text }}</div>
+	<div class="footer">
+		<button class="likes">
+			<img class="img" src="@/assets/svg/like.svg">
+			<div class="count">5</div>
+		</button>
+		<div class="comments">23</div>
+		<div class="author">{{ post.author.login }}</div>
+	</div>
 </template>

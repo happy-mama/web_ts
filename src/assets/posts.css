@@ -1,0 +1,90 @@
+div.posts {
+    background-color: #202225;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+
+    padding: 10px;
+    border: 4px solid inherit;
+    border-radius: 4px;
+}
+div.posts div.header {
+    background-color: #2f3136;
+}
+div.posts div.body {
+    background-color: #282B2F;
+
+    padding: 10px;
+    border-radius: 4px;
+}
+
+div.posts div.body div.post {
+    /* #202225; */
+    background-color: #202225;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 4px;
+
+    /* border: 4px solid #202225; */
+    border-radius: 8px;
+}
+div.posts div.body div.post div.title {
+    background-color: #282B2F;
+
+    padding: 5px;
+
+    border-radius: 4px 4px 0 0;
+}
+div.posts div.body div.post div.text {
+    background-color: #282B2F;
+
+    margin-top: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+div.posts div.body div.post div.footer {
+    display: flex;
+    justify-content:space-between;
+}
+div.posts div.body div.post div.footer button.likes {
+    background-color: #282B2F;
+    display: flex;
+
+    margin-right: 5px;
+    padding: 5px;
+    border: 2px solid #282B2F;
+    border-radius: 0 0 0 4px;
+}
+div.posts div.body div.post div.footer button.likes img.img {
+    background-color: inherit;
+    float: left;
+}
+div.posts div.body div.post div.footer button.likes div.count {
+    color: #ededed;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50%;
+}
+div.posts div.body div.post div.footer div.comments {
+    background-color: #282B2F;
+
+    padding: 5px;
+
+    margin-right: 5px;
+}
+div.posts div.body div.post div.footer div.author {
+    background-color: #282B2F;
+    width: 100%;
+
+    padding: 5px;
+
+    border-radius: 0 0 4px 0;
+}
