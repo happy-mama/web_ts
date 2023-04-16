@@ -5,7 +5,7 @@ import axios from "axios";
 export default defineComponent({
     data() {
         return {
-            useApi: "",
+            thread: "",
             post: {
                 header: "",
                 text: ""
@@ -31,6 +31,7 @@ export default defineComponent({
             this.errors.header = ""
 
             axios.post(this.apiLink + "/web/post", {
+                thread: this.thread,
                 auth: this.$cookies.get("token"),
                 data: {
                     header: this.post.header,
@@ -47,14 +48,10 @@ export default defineComponent({
             })
         },
         updateQueryApi() {
-            if (this.$route.query.api) {
-                if (this.$route.query.api == "rancor" || this.$route.query.api == "sereja") {
-                    this.useApi = this.$route.query.api
-                } else {
-                    this.useApi = "rancor"
-                }
+            if (this.$route.query.thread) {
+                this.thread = String(this.$route.query.thread)
             } else {
-                this.useApi = "rancor"
+                this.thread = "main"
             }
         }
     },
@@ -65,14 +62,35 @@ export default defineComponent({
 </script>
 
 <template>
+    <div class="midle" style="min-width: 80%;">
+        <div class="e">
+            <div class="msg">
+                <div class="title">Create post</div>
+                <div class="description">
+                    Chose thread:
+                    <select v-model="thread" id="Api">
+                        <option value="main">main</option>
+                        <option value="test">test</option>
+                    </select><br>
+                    <br>
+                    <input type="text" v-model="post.header" placeholder="post title">
+                    <p class="error">{{ errors.header }}</p><br>
+                    <input type="text" v-model="post.text" placeholder="post text">
+                    <p class="error">{{ errors.text }}</p><br>
+                    <button class="green" @click="sendPost()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="embed">
         <div class="header">Poster</div>
         <div class="text">
             Here you can create a post on this site or on sereja.huesos.net<br><br>
             Choose Api:
-            <select v-model="useApi" name="Api" id="Api">
-                <option value="rancor">rancor</option>
-                <option value="sereja">sereja</option>
+            <select v-model="thread" id="Api">
+                <option value="main">main</option>
+                <option value="test">test</option>
             </select><br><br>
             Write some text:<br>
             <input v-model="post.header" placeholder="post header">

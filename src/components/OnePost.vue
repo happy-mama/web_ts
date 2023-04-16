@@ -2,6 +2,7 @@
 import type { PropType } from "vue";
 
 interface Post {
+	id: string,
 	header: string,
 	text: string,
 	author: {
@@ -27,7 +28,10 @@ export default {
 			<img class="img" src="@/assets/svg/like.svg">
 			<div class="count">5</div>
 		</button>
-		<div class="comments">23</div>
+		<button class="comments">
+			<img class="img" src="@/assets/svg/comment.svg">
+			<div class="count">23</div>
+		</button>
 		<div class="author">{{ post.author.login }}</div>
 	</div>
 </template>

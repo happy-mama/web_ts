@@ -10,6 +10,11 @@ div.posts {
     border-radius: 4px;
 }
 div.posts div.header {
+    margin-bottom: 10px;
+    padding: 5px;
+
+    border-radius: 4px;
+
     background-color: #2f3136;
 }
 div.posts div.body {
@@ -44,6 +49,9 @@ div.posts div.body div.post div.title {
 }
 div.posts div.body div.post div.text {
     background-color: #282B2F;
+    display: flex;
+
+    align-self: center;
 
     margin-top: 5px;
     padding: 5px;
@@ -58,7 +66,6 @@ div.posts div.body div.post div.footer button.likes {
     display: flex;
 
     margin-right: 5px;
-    padding: 5px;
     border: 2px solid #282B2F;
     border-radius: 0 0 0 4px;
 }
@@ -68,17 +75,35 @@ div.posts div.body div.post div.footer button.likes img.img {
 }
 div.posts div.body div.post div.footer button.likes div.count {
     color: #ededed;
+    display: flex;
 
+    font-size: 16px;
+
+    margin-left: 3px;
     margin-top: auto;
     margin-bottom: auto;
-    height: 50%;
 }
-div.posts div.body div.post div.footer div.comments {
+div.posts div.body div.post div.footer button.comments {
     background-color: #282B2F;
-
-    padding: 5px;
+    display: flex;
 
     margin-right: 5px;
+    border: 2px solid #282B2F;
+    border-radius: 0 0 0 4px;
+}
+div.posts div.body div.post div.footer button.comments img.img {
+    background-color: inherit;
+    float: left;
+}
+div.posts div.body div.post div.footer button.comments div.count{
+    color: #ededed;
+    display: flex;
+
+    font-size: 16px;
+
+    margin-left: 3px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 div.posts div.body div.post div.footer div.author {
     background-color: #282B2F;
@@ -87,4 +112,37 @@ div.posts div.body div.post div.footer div.author {
     padding: 5px;
 
     border-radius: 0 0 4px 0;
+}
+
+div.posts button.default {
+    display: inline;
+
+    color: #ededed;
+    font-weight: bolder;
+    background-color: #515151;
+
+    padding: 2px;
+
+    border: 2px solid #515151;
+    border-radius: 4px;
+}
+
+div.posts a.embed {
+	border-radius: 4px;
+
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+}
+div.posts a.embed div.text {
+    background-color: inherit;
+    display: block;
+
+    float: right;
+}
+div.posts a.embed img {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50%;
 }

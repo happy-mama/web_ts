@@ -28,7 +28,7 @@
 				</div>
 			</router-link>
 			<div class="space"></div>
-			<router-link class="bar" to="/instruments/posts">
+			<router-link class="bar" to="/instruments/posts?thread=test">
 				<div class="msg">
 					<div class="title">Posts</div>
 					<div class="description">
