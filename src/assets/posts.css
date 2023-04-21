@@ -69,11 +69,19 @@ div.posts div.body div.post div.footer button.likes {
     border: 2px solid #282B2F;
     border-radius: 0 0 0 4px;
 }
-div.posts div.body div.post div.footer button.likes img.img {
+div.posts div.body div.post div.footer button.likes-active {
+    background-color: #808080;
+    display: flex;
+
+    margin-right: 5px;
+    border: 2px solid #282B2F;
+    border-radius: 0 0 0 4px;
+}
+div.posts div.body div.post div.footer button img.img {
     background-color: inherit;
     float: left;
 }
-div.posts div.body div.post div.footer button.likes div.count {
+div.posts div.body div.post div.footer button div.count {
     color: #ededed;
     display: flex;
 
@@ -83,7 +91,7 @@ div.posts div.body div.post div.footer button.likes div.count {
     margin-top: auto;
     margin-bottom: auto;
 }
-div.posts div.body div.post div.footer button.comments {
+div.posts div.body div.post div.footer button {
     background-color: #282B2F;
     display: flex;
 
@@ -91,7 +99,7 @@ div.posts div.body div.post div.footer button.comments {
     border: 2px solid #282B2F;
     border-radius: 0 0 0 4px;
 }
-div.posts div.body div.post div.footer button.comments img.img {
+div.posts div.body div.post div.footer button img.img {
     background-color: inherit;
     float: left;
 }

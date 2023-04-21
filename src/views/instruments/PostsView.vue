@@ -13,6 +13,24 @@ export default defineComponent({
         };
     },
     methods: {
+        like(postId: string) {
+            axios.post(this.apiLink + "/web/posts/like", {
+                thread: this.thread,
+                postId: postId,
+                auth: this.$cookies.get("token")
+            }).then(res => {
+                if (res.data.error) {
+                    console.log(res.data.error)
+                } else {
+                    this.posts.forEach(post => {
+                        if (post._id == postId) {
+                            post.myLike = true
+                            post.likes += 1
+                        }
+                    })
+                }
+            })
+        },
         loadPosts() {
             this.posts = []
             this.isLoading = true;
@@ -65,10 +83,10 @@ export default defineComponent({
                 <option value="test">test</option>
             </select><br>
             <!-- <div style="display: inline;"> -->
-                <button class="default" @click="loadPosts">reload posts</button><br>
-                <RouterLink class="link" :to="`/instruments/poster?thread=${thread}`">
-                    Create post
-                </RouterLink>
+            <button class="default" @click="loadPosts">reload posts</button><br>
+            <RouterLink class="link" :to="`/instruments/poster?thread=${thread}`">
+                Create post
+            </RouterLink>
             <!-- </div> -->
         </div>
         <div class="body" v-if="!isLoading">
