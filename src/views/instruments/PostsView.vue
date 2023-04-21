@@ -4,6 +4,12 @@ import axios from 'axios';
 import OnePost from "../../components/OnePost.vue"
 import router from '@/router';
 
+interface post {
+    _id: string
+    myLike: boolean
+    likes: number
+}
+
 export default defineComponent({
     data() {
         return {
@@ -13,7 +19,7 @@ export default defineComponent({
         };
     },
     methods: {
-        like(postId: string) {
+        like(postId: any) {
             axios.post(this.apiLink + "/web/posts/like", {
                 thread: this.thread,
                 postId: postId,
@@ -22,7 +28,7 @@ export default defineComponent({
                 if (res.data.error) {
                     console.log(res.data.error)
                 } else {
-                    this.posts.forEach(post => {
+                    this.posts.forEach((post: post) => {
                         if (post._id == postId) {
                             post.myLike = true
                             post.likes += 1
@@ -62,6 +68,7 @@ export default defineComponent({
         }
     },
     mounted() {
+        this.emitter.on("post-like", postId => this.like(postId))
         this.updateQueryApi();
         this.loadPosts();
     },
