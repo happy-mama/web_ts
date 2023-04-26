@@ -82,22 +82,4 @@ export default defineComponent({
             </div>
         </div>
     </div>
-
-    <div class="embed">
-        <div class="header">Poster</div>
-        <div class="text">
-            Here you can create a post on this site or on sereja.huesos.net<br><br>
-            Choose Api:
-            <select v-model="thread" id="Api">
-                <option value="main">main</option>
-                <option value="test">test</option>
-            </select><br><br>
-            Write some text:<br>
-            <input v-model="post.header" placeholder="post header">
-            <p class="error">{{ errors.header }}</p><br>
-            <input v-model="post.text" placeholder="post text">
-            <p class="error">{{ errors.text }}</p><br>
-            <button @click="sendPost()">Send</button>
-        </div>
-    </div>
 </template>

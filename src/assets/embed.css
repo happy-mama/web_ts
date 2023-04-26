@@ -2,29 +2,32 @@ div.e {
     background-color: #2f3136;
     color: #ededed;
 
-	padding: 5px;
-	margin-left: auto;
-	margin-right: auto;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
 
     border: 2px solid;
     border-color: #2d7d46;
     border-radius: 4px;
 }
+
 div.e div.header {
-	font-size: 20px;
+    font-size: 20px;
 
-	padding: 5px;
-	margin: 10px;
+    padding: 5px;
+    margin: 10px;
 
-	background-color: #202225;
+    background-color: #202225;
     border-radius: 4px;
 }
-div.e div.text {
-	padding: 5px;
 
-	background-color: #282B2F;
+div.e div.text {
+    padding: 5px;
+
+    background-color: #282B2F;
     border-radius: 4px;
-} 
+}
+
 div.e div.space {
     min-height: 10px;
 }
@@ -34,10 +37,10 @@ div.e p.special {
     font-weight: bolder;
     color: #202225;
 
-	padding-left: 2px;
+    padding-left: 2px;
     padding-right: 2px;
-	border-radius: 4px;
-	display:inline;
+    border-radius: 4px;
+    display: inline;
 }
 
 div.e div.msg {
@@ -47,6 +50,7 @@ div.e div.msg {
     border: 2px;
     border-radius: 4px;
 }
+
 div.e div.msg div.title {
     color: #ededed;
     font-size: 20px;
@@ -58,6 +62,7 @@ div.e div.msg div.title {
     border: 2px;
     border-radius: 4px 4px 0px 0px;
 }
+
 div.e div.msg div.description {
     color: #ededed;
     padding: 3px;
@@ -68,16 +73,17 @@ div.e div.msg div.description {
 
 a.link {
     color: #1da8ff;
-	text-decoration: none;
+    text-decoration: none;
 
-	background-color: #003759;
-	padding: 1px;
-	border-radius: 4px;
+    background-color: #003759;
+    padding: 1px;
+    border-radius: 4px;
 }
+
 div.e a.bar {
     display: block;
 
-	text-decoration: none;
+    text-decoration: none;
     color: #ededed;
     background-color: unset;
 
@@ -86,18 +92,20 @@ div.e a.bar {
 }
 
 div.e a.embed {
-	border-radius: 4px;
+    border-radius: 4px;
 
     margin: 5px;
     padding: 5px;
     display: inline-block;
 }
+
 div.e a.embed div.text {
     background-color: inherit;
     display: block;
 
     float: right;
 }
+
 div.e a.embed img {
     display: inline-block;
     margin-top: auto;
@@ -107,7 +115,7 @@ div.e a.embed img {
 
 div.e ul.list {
     padding-left: 25px;
-    list-style:square;
+    list-style: square;
 
     margin: 5px;
 
@@ -115,6 +123,7 @@ div.e ul.list {
     border-radius: 4px;
     border-color: #202225;
 }
+
 div.e ul.list li {
     margin: 5px;
 }
@@ -140,31 +149,62 @@ a.FSFL {
     padding: 5px;
     display: flex;
 }
+
 a.FSFL div {
     margin-left: 4px;
     margin-top: auto;
     margin-bottom: auto;
     height: 50%;
 }
+
 a.FSFL img {
     background-color: inherit;
     float: left;
 }
 
 div.e p.error {
-	color: crimson;
-	padding: 2px;
-	border-radius: 4px;
-	display:inline;
+    color: crimson;
+    padding: 2px;
+    border-radius: 4px;
+    display: inline;
 }
 
 div.e input[type="text"] {
-	background-color: #202225;
+    background-color: #202225;
 
-	color: #ededed;
+    color: #ededed;
 
-	border: solid;
-	border-color: #202225;
-	border-left: 3px solid #ededed;
+    border: solid;
+    border-color: #202225;
+    border-left: 3px solid #ededed;
     border-radius: 4px;
+}
+
+
+
+table.DBH {
+    border-collapse: collapse;
+}
+
+table.DBH tr:nth-child(even) {
+    background-color: #191717;
+}
+
+table.DBH th {
+    padding: 7px;
+    text-align: left;
+    background-color: #2d7d46;
+    color: white;
+}
+
+table.DBH td {
+    padding: 3px;
+}
+
+table.DBH th.first {
+    background-color: #202225;
+}
+
+table.DBH td.first {
+    background-color: #2f3136;
 }

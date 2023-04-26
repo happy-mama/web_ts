@@ -1,0 +1,61 @@
+.op-block {
+    transform: translateZ(0);
+    background: #202225;
+    border-bottom: 1px solid #202225;
+    border-left: 1px solid #202225;
+    border-right: 1px solid #202225;
+}
+
+.op-block>.op-togle {
+    display: none;
+    position: absolute;
+    opacity: 0;
+}
+
+.op-block>label {
+    display: block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    border-top: 1px solid #202225;
+    border-bottom: 1px solid #202225;
+    background: #2f3136;
+    color: #ececec;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.op-block>label:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #555;
+    border-top: 2px solid #555;
+    transform: rotate(-135deg);
+    transition: .4s transform;
+}
+
+.op-block>section {
+    overflow: hidden;
+    height: 0;
+    transition: all .4s;
+}
+
+.op-block>.op-togle:checked~label:after {
+    transform: rotate(45deg);
+    top: 16px;
+}
+
+.op-block>.op-togle:checked~section {
+    display: contents;
+}
+
+.op-block>section div.content {
+    margin: 15px;
+    padding: 0 20px;
+}

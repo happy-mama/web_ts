@@ -36,6 +36,15 @@
 					</div>
 				</div>
 			</router-link>
+			<div class="space"></div>
+			<router-link class="bar" to="/instruments/DBH">
+				<div class="msg">
+					<div class="title">DBH</div>
+					<div class="description">
+						Guide for lib
+					</div>
+				</div>
+			</router-link>
 		</div>
 	</div>
 </template>

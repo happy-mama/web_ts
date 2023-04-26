@@ -10,6 +10,7 @@ import PosterView from "../views/instruments/PosterView.vue"
 import PostsView from "../views/instruments/PostsView.vue"
 import UserLOGINView from "../views/UserLOGINView.vue"
 import AuthView from "../views/AuthView.vue"
+import DBHGuideView from "../views/instruments/DBHGuideView.vue"
 
 import TestView from "../views/TestView.vue"
 
@@ -60,6 +61,10 @@ const router = createRouter({
 			path: "/instruments/posts",
 			name: "instruments/posts",
 			component: PostsView
+		}, {
+			path: "/instruments/DBH",
+			name: "instruments/DBH",
+			component: DBHGuideView
 		}
 	]
 })
