@@ -1,14 +1,6 @@
 <script lang="ts">
 import "@/assets/op_block.css"
-import "@/assets/prism.css"
-
-import Prism from "prismjs"
-
-export default {
-    mounted() {
-        Prism.highlightAll()
-    },
-}
+export default {}
 </script>
 
 <template>

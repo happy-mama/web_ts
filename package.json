@@ -1,6 +1,6 @@
 {
 	"name": "web",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -14,8 +14,7 @@
 		"axios": "^0.27.2",
 		"mitt": "^3.0.0",
 		"pinia": "^2.0.14",
-		"prismjs": "^1.29.0",
-		"vue": "^3.2.37",
+		"vue": "^3.2.47",
 		"vue-axios": "^3.4.1",
 		"vue-cookies": "^1.8.2",
 		"vue-router": "^4.0.16"
